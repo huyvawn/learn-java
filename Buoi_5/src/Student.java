@@ -15,6 +15,6 @@ String country;
 		public String toString() {
 			// TODO Auto-generated method stub
 			
-			return "Student: name = "+ name + ", age : "+ age +"";
+			return "Student: Name = "+ name + ", Age : "+ age +", Class : "+ clazz;
 		}
 }

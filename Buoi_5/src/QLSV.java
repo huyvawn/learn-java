@@ -12,26 +12,17 @@ public class QLSV {
 	
 		printMenu();
 		 choice = scanner.nextInt();
+		 scanner.nextLine();
 //		System.out.println(choice);
 		switch (choice) {
 		case 1: {
 			System.out.println("Your choice:" +choice);
-			System.out.println("\n Enter student's name: \n");
-			scanner.nextLine();
-			String name = scanner.nextLine();
-			System.out.println("\n Enter student's age: \n");
-			int age = scanner.nextInt();
-			System.out.println("\n Enter student's class: \n");
-			String clazz = scanner.nextLine();
-			Student std = new Student(name, age, clazz);
-			studentList.add(std);
+			taosinhvien(studentList);
 			break;
 		}
 		case 2: {
 			System.out.println("Your choice:" +choice);
-			for (Student stdlist: studentList) {
-				System.out.println(stdlist);
-			}
+			xemsinhvien(studentList);
 			break;
 		}
 		case 3: {
@@ -63,8 +54,25 @@ public class QLSV {
 		return;
 	}
 	
-	public static void taosinhvien() {
+	public static void taosinhvien(ArrayList<Student> studentList) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("\n Enter student's name: \n");
 		
+		String name = scanner.nextLine();
+//		System.out.println(name);
+		System.out.println("\n Enter student's age: \n");
+		int age = scanner.nextInt();
+		scanner.nextLine();
+		System.out.println("\n Enter student's class: \n");
+		String clazz = scanner.nextLine();
+		Student std = new Student(name, age, clazz);
+		studentList.add(std);
+	}
+	
+	public static void xemsinhvien(ArrayList<Student> studentList) {
+		for (Student stdlist: studentList) {
+			System.out.println(stdlist);
+		}
 	}
 	
 	public static void xoasinhvien() {
