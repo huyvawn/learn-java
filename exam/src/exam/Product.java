@@ -49,7 +49,7 @@ public class Product {
 		if (thumbnail != null && !thumbnail.isEmpty())
 		this.thumbnail = thumbnail;
 		else 
-			System.out.println("Invalid thumbnail.");
+			System.out.println("Invalid thumbnail. Switched to default thumbnail.");
 	}
 
 	public double getPrice() {
@@ -81,10 +81,11 @@ public class Product {
 	}
 
 	public void setDescription(String description) {
-		if (description != null && !description.isEmpty())
+		if (description != null && !description.isBlank())
 		this.description = description;
 		else {
-			System.out.println("Invalid description.");
+			System.out.println("No description entered.");
+			this.description = "No description available.";
 		}
 	}
 	
