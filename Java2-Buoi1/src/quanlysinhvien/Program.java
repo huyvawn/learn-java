@@ -10,9 +10,10 @@ public class Program {
 		// TODO Auto-generated method stub
 		
 			List<Student> liststudent = new ArrayList<Student>();
-			Scanner scanner = new Scanner(System.in);
+			
 			while (true) {
 			printMenu();
+			Scanner scanner = new Scanner(System.in);
 			System.out.println("Lua chon chuc nang:");
 			try {
 				int choice = scanner.nextInt();
