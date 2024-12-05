@@ -20,12 +20,15 @@ class Program {
 		
 		System.out.println("Input gender(M or F): ");
 		String genderString = scanner.nextLine();
-		Gender gender = null;
-		if (genderString == "M")
+		Gender gender = Gender.Male;
+		if (genderString.equals("M")) {
 			gender = Gender.Male;
-		if (genderString == "F") {
+		}
+		if (genderString.equals("F")) {
 			gender = Gender.Female;
 		}
+		System.out.println(gender);
+		System.out.println(genderString);
 		System.out.println("Input year of birth: ");
 		int year = scanner.nextInt();
 		scanner.nextLine();
