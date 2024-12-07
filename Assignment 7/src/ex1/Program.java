@@ -72,11 +72,24 @@ public class Program {
 		System.out.println("J");
 		
 //		k)	Delete student có id = 5;
-		for (Student student : studentlist) {
-			if (student.id == 5) {
-				studentlist.remove(student);
-			}
-		}
+//		for (Student student : studentlist) {
+//			if (student.id == 5) {
+//				studentlist.remove(student);
+//				break;
+//			}
+//		}
+		// delete using removeIf
+		studentlist.removeIf( student -> student.id == 5);
+		
+		//delete using Iterator
+//		Iterator<Student> iterator = studentlist.iterator();
+//		while (iterator.hasNext()) {
+//			Student student = iterator.next();
+//			if (student.id == 5) {
+//				iterator.remove();
+//			}
+//		}
+		
 		System.out.println("K");
 		
 //		l)	Tạo 1 ArrayList tên là studentCopies và add tất cả students vào studentCopies
