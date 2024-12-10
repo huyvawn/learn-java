@@ -31,7 +31,7 @@ public class Program {
 				scanner.nextLine();
 				switch (choice) {
 				case 1:
-					themsinhvien(liststudent, scanner);
+					themsinhvien(liststudent, scanner, ketnoi);
 					break;
 				case 2:
 					hiensinhvien(liststudent,ketnoi);
@@ -53,7 +53,7 @@ public class Program {
 				}
 			} catch (Exception e) {
 				// TODO: handle exception
-				System.out.println("Phai nhap so");
+				System.out.println(e);
 			}
 			
 		}
@@ -68,15 +68,12 @@ public class Program {
 		System.out.println("5. Thoat chuong trinh");
 	}
 	
-	public static void themsinhvien(List<Student> liststudent, Scanner scanner) {
+	public static void themsinhvien(List<Student> liststudent, Scanner scanner, Connection ketnoi) throws SQLException {
 		System.out.println("So sinh vien ban muon them: ");
 		
 		int times = scanner.nextInt();
 		scanner.nextLine();
 		for (int i = 0; i < times; i++) {
-			System.out.println("Nhap id: ");
-			int id = scanner.nextInt();
-			scanner.nextLine();
 			System.out.println("Nhap ten: ");
 			String name = scanner.nextLine();
 			System.out.println("Nhap tuoi: ");
@@ -86,14 +83,19 @@ public class Program {
 			String country = scanner.nextLine();
 			System.out.println("Nhap lop: ");
 			String clazz = scanner.nextLine();
-			Student std = new Student(id, name, age, country, clazz);
-			liststudent.add(std);
-			System.out.println("Them thanh cong.");
+			String themdulieu = "insert into students (`name`, age, country, clazz)"
+					+ "values (?,?,?,?);";
+			PreparedStatement insert = ketnoi.prepareStatement(themdulieu);
+			insert.setString(1, name);
+			insert.setInt(2, age);
+			insert.setString(3, country);
+			insert.setString(4, clazz);
+			insert.executeUpdate();
+			System.out.println("Them du lieu thanh cong");
+
 		}
 		
-		for (Student student : liststudent) {
-			System.out.println(student);
-		}
+		
 	}
 	public static void hiensinhvien(List<Student> liststudent, Connection ketnoi) throws SQLException {
 		String lenhshowdata = "select * from dbfpt.students;";
