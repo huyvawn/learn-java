@@ -35,7 +35,7 @@ public class PersonDAOImp implements PersonDAO {
 	public List<Person> getAllPeople() {
 		// TODO Auto-generated method stub
 		List<Person> peopleList = new ArrayList<Person>();
-		String sqlshowdata = "SELECT * FROM dbfpt.person;";
+		String sqlshowdata = "SELECT * FROM dbfpt.person inner join dbfpt.role on dbfpt.person.role = dbfpt.role.role;";
 		try {
 		Connection ketnoi = Connect.getConnection();
 			PreparedStatement statement = ketnoi.prepareStatement(sqlshowdata);
@@ -45,11 +45,9 @@ public class PersonDAOImp implements PersonDAO {
 				String name = ketqua.getString("name");
 				int age = ketqua.getInt("age");
 				String country = ketqua.getString("country");
-				double diemtin = ketqua.getDouble("diemtin");
-				double diemtoan = ketqua.getDouble("diemtoan");
-				double ngaycong = ketqua.getDouble("ngaycong");
 				int role = ketqua.getInt("role");
-				Person person = new Person(id, name, age, country, diemtin, diemtoan, ngaycong, role);
+				String roleName = ketqua.getString("roleName");
+				Person person = new Person(id, name, age, country, role);
 				peopleList.add(person);
 			}
 		} catch (SQLException e) {
@@ -60,9 +58,21 @@ public class PersonDAOImp implements PersonDAO {
 	}
 
 	@Override
-	public void addMentor(Person person) {
+	public void addMentor(String name, int age, String country, int ngaycong) {
 		// TODO Auto-generated method stub
-		
+		String sqlinsert = "INSERT INTO person (name,age,country,ngaycong,role) VALUES (?,?,?,?,2)";
+		try {
+			Connection ketnoi = Connect.getConnection();
+			PreparedStatement statement = ketnoi.prepareStatement(sqlinsert);
+			statement.setString(1, name);
+			statement.setInt(2, age);
+			statement.setString(3, country);
+			statement.setDouble(4, ngaycong);
+			statement.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 	}
 	
 
