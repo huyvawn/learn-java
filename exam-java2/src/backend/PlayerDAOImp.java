@@ -11,7 +11,7 @@ import entity.Player;
 public class PlayerDAOImp implements PlayerDAO {
 
 	@Override
-	public void addPlayer(Player player) {
+	public void insertPlayer(Player player) {
 		// TODO Auto-generated method stub
 		String sql = "INSERT INTO herogame.player (NationalId, PlayerName, HighScore, Level) VALUES (?, ?, ?, ?);";
         try (Connection connection = Connect.getConnection();

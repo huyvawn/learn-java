@@ -8,9 +8,19 @@ public class Player {
 	private int level;
 	private String nationalName;
 	
-	public Player(int playerId, int nationalId, String playerName, int highScore, int level) {
+	public Player(int playerId, int nationalId, String playerName, int highScore, int level, String nationalName) {
 		super();
 		this.playerId = playerId;
+		this.nationalId = nationalId;
+		this.playerName = playerName;
+		this.highScore = highScore;
+		this.level = level;
+		this.nationalName = nationalName;
+	}
+	
+	public Player( int nationalId, String playerName, int highScore, int level) {
+		super();
+		
 		this.nationalId = nationalId;
 		this.playerName = playerName;
 		this.highScore = highScore;
@@ -62,7 +72,7 @@ public class Player {
 		return "Player [playerId=" + playerId + ", nationalId=" + nationalId + ", playerName=" + playerName
 				+ ", highScore=" + highScore + ", level=" + level + "]";
 	}
-	public void displayInfo() {
+	public void displayAll() {
 		System.out.println("Player [playerId=" + playerId  + ", playerName=" + playerName
 				+ ", highScore=" + highScore + ", level=" + level + ", National: " + nationalName + "]");
 	}
