@@ -93,6 +93,7 @@ public class HeroGame {
 				break;
 				
 			default:
+				System.out.println("Invalid choice.");
 				break;
 			}
 		} while (choice != 0);
