@@ -82,6 +82,9 @@ public class HeroGame {
 				String nameToFind = scanner.nextLine();
 				displayAllByPlayerName(nameToFind);
 				break;
+			case 5:
+				displayTop10();
+				break;
 			case 6:
 				System.out.println("Enter id of player you want to delete: ");
 				int idToDelete = scanner.nextInt();
@@ -126,5 +129,28 @@ public class HeroGame {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+	}
+	public static void displayTop10() {
+		String sqlshowdata = "SELECT * FROM herogame.player inner join herogame.national on"
+				+ " herogame.player.NationalId = herogame.national.NationalId"
+				+ " ORDER BY HighScore DESC LIMIT 10;";
+		try {
+		Connection ketnoi = Connect.getConnection();
+			PreparedStatement statement = ketnoi.prepareStatement(sqlshowdata);
+			ResultSet ketqua = statement.executeQuery();
+			while (ketqua.next()) {
+				int playerId = ketqua.getInt("PlayerId");
+				String playerName = ketqua.getString("PlayerName");
+				int nationalId = ketqua.getInt("NationalId");
+				String nationalName = ketqua.getString("NationalName");
+				int highScore = ketqua.getInt("HighScore");
+				int level = ketqua.getInt("Level");
+				Player playerShow = new Player(playerId, nationalId, playerName, highScore, level, nationalName);
+				playerShow.displayAll();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
