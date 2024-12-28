@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding ="UTF-8" ?>
+<!DOCTYPE Student SYSTEM "Student.dtd">
+<Student>
+<t2404>
+	<id>1</id>
+	<name>Minh</name>
+	<age>20</age>
+	<country>HN</country>
+</t2404>
+<t2404>
+	<id>2</id>
+	<name>Minh2</name>
+	<age>21</age>
+	<country>SG</country>
+</t2404>
+</Student>

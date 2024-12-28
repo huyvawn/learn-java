@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding ="UTF-8" ?>
+<!DOCTYPE Library SYSTEM "Library.dtd" >
+<Library>
+<Book Type="Comic">
+<Title>Doraemon</Title>
+<Author>abc</Author>
+<Year>2000</Year>
+</Book>
+<Book Type="Anime">
+<Title>Conan</Title>
+<Author>xyz</Author>
+<Year>2001</Year>
+</Book>
+</Library>

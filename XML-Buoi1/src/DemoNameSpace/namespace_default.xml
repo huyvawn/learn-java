@@ -1,0 +1,5 @@
+<?xml version ="1.0" encoding ="UTF-8"?>
+<Library xmlns:book ="http://example.com/library" xmlns:author="http://example.com/author">
+<book:Title>Java Book</book:Title>
+<author:Name>Minh</author:Name>
+</Library>

@@ -1,0 +1,6 @@
+<!ELEMENT Library (Book+)>
+<!ELEMENT Book (Title,Author,Year)>
+<!ELEMENT Title (#PCDATA) >
+<!ELEMENT Author (#PCDATA) >
+<!ELEMENT Year (#PCDATA) >
+<!ATTLIST Book Type CDATA #REQUIRED >

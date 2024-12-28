@@ -1,0 +1,6 @@
+<!ELEMENT Student (t2404+)>
+<!ELEMENT t2404 (id,name,age,country)>
+<!ELEMENT id (#PCDATA) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT age (#PCDATA) >
+<!ELEMENT country (#PCDATA) >
