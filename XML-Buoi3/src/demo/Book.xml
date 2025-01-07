@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Book.css"?>
+<library>
+<heading>Thu vien FPT</heading>
+<book>
+<title>Harry Potter</title>
+<author>Author A</author>
+<price>39.99</price>
+</book>
+<book>
+<title>Java Programming</title>
+<author>Professor</author>
+<price>50.00</price>
+</book>
+</library>

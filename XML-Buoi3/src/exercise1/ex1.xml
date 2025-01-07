@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ex1.xsl"?>
+<statedata>
+<state>
+<name>California</name>
+<population>33871648 people</population>
+<capital>Sacramento</capital>
+<bird>Quail</bird>
+<flower>Golden Poppy</flower>
+</state>
+
+<state>
+<name>Massachusetts</name>
+<population>6349097 people</population>
+<capital>Boston</capital>
+<bird>Chickadee</bird>
+<flower>Mayflower</flower>
+</state>
+
+<state>
+<name>New York</name>
+<population>18976457 people</population>
+<capital>Albany</capital>
+<bird>Bluebird</bird>
+<flower>Rose</flower>
+</state>
+</statedata>

@@ -1,0 +1,14 @@
+body{
+	text-align:center;
+}
+section, header, item{
+	display: block;
+}
+section{
+	margin: 20px 0;
+	background: rgba(226,220,220,0.5);
+	padding: 1em 0;
+}
+header{
+	
+}

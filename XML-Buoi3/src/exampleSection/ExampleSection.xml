@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<?xml-stylesheet type="text/css" href="SectionStyle.css"?>
+<body>
+<section>
+<header>Data Structures</header>
+<item>Array</item>
+<item>Stack</item>
+<item>Queue</item>
+<item>Linked List</item>
+</section>
+
+<section>
+<header>Web Technology</header>
+<item>HTML</item>
+<item>CSS</item>
+<item>Javascript</item>
+<item>PHP</item>
+</section>
+
+<section>
+<header>Languages</header>
+<item>C/C++</item>
+<item>Java</item>
+<item>Python</item>
+<item>Ruby</item>
+</section>
+
+<section>
+<header>DBMS</header>
+<item>Basics</item>
+<item>Intermediate</item>
+<item>Advanced</item>
+<item></item>
+</section>
+
+</body>

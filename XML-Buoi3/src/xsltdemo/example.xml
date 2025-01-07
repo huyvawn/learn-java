@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="exampleforeach.xsl"?>
+
+<library>
+<book>
+<title>Doraemon</title>
+<author>abc</author>
+<year>2000</year>
+</book>
+<book>
+<title>Conan</title>
+<author>Nobiata</author>
+<year>1999</year>
+</book>
+
+</library>
