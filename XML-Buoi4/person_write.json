@@ -1,1 +1,1 @@
-{"country":"Ha Noi","name":"Nguyen Van B","age":50}
+[{"id":1,"course_name":"Java","course_fees":"25000","course_duration":"3 Months"},{"id":2,"course_name":"C++","course_fees":"20000","course_duration":"3 Months"}]

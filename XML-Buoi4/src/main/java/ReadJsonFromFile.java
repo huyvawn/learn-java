@@ -10,6 +10,7 @@ public class ReadJsonFromFile {
 		String filePath = "person.json";
 		JSONParser parser = new JSONParser();
 		FileReader reader = new FileReader(filePath);
+		System.out.println(reader);
 		JSONObject jsonobj = (JSONObject) parser.parse(reader);
 		
 		String name = (String) jsonobj.get("name");

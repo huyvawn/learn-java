@@ -1,0 +1,20 @@
+<PatientList>
+  <Patient>
+    <id>1</id>
+    <fullName>Larry Ellison</fullName>
+    <weight>60</weight>
+    <height>1.7</height>
+    <bloodType>A</bloodType>
+    <gender>false</gender>
+    <birthDate>1998-12-25</birthDate>
+  </Patient>
+  <Patient>
+    <id>2</id>
+    <fullName>John Pak</fullName>
+    <weight>78</weight>
+    <height>1.86</height>
+    <bloodType>O</bloodType>
+    <gender>true</gender>
+    <birthDate>1999-10-25</birthDate>
+  </Patient>
+</PatientList>
