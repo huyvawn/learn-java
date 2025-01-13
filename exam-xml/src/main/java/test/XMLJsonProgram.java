@@ -128,7 +128,7 @@ public class XMLJsonProgram {
 	}
 	private static void writeDataToFileXML(List<Patients> patientList) throws IOException {
 		 XStream xstream = new XStream();
-		  	xstream.alias("Patient", Patients.class);
+		  	xstream.alias("Patients", Patients.class);
 		    xstream.alias("PatientList", PatientList.class);
 		    xstream.addImplicitCollection(PatientList.class, "list");
 
@@ -141,21 +141,31 @@ public class XMLJsonProgram {
          	FileWriter file = new FileWriter(filePath);
          	file.write(xml);	
          	file.flush();
+         	
 	}
 	private static void readDataFromFileXML() {
 		try {
-			XStream xstream = new XStream();
-		  	xstream.alias("Patient", Patients.class);
-		    xstream.alias("PatientList", PatientList.class);
-		    xstream.addImplicitCollection(PatientList.class, "list");
+			 
 		      File myObj = new File("Patients.xml");
 		      Scanner myReader = new Scanner(myObj);
-		      while (myReader.hasNextLine()) {
-		        String data = myReader.nextLine();
-		        System.out.println(data);
-		        PatientList pList = (PatientList)xstream.fromXML(data);
-//		        pList.display();
-		      }
+//		      while (myReader.hasNextLine()) {
+//		        String data = myReader.nextLine();
+//		        System.out.println(data); }
+		        XStream xstream = new XStream();
+		        xstream.allowTypes(new Class[] { Patients.class, PatientList.class });
+
+		        // Configure aliases
+		        xstream.processAnnotations(Patients.class);
+		        xstream.processAnnotations(PatientList.class);
+		        File file = new File("Patients.xml");
+		        // Deserialize XML to Java objects
+		        PatientList patientList = (PatientList) xstream.fromXML(file);
+
+		        // Print the list of patients
+		        for (Patients patient : patientList.getPatients()) {
+		            System.out.println(patient);
+		        }
+		      
 		      myReader.close();
 		    } catch (FileNotFoundException e) {
 		      System.out.println("An error occurred.");

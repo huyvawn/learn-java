@@ -1,7 +1,10 @@
 package test;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Patients {
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+@XStreamAlias("Patients")
+public class Patients implements Serializable {
 int id;
 String fullName;
 int weight;

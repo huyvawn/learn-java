@@ -1,5 +1,5 @@
 <PatientList>
-  <Patient>
+  <Patients>
     <id>1</id>
     <fullName>Larry Ellison</fullName>
     <weight>60</weight>
@@ -7,8 +7,8 @@
     <bloodType>A</bloodType>
     <gender>false</gender>
     <birthDate>1998-12-25</birthDate>
-  </Patient>
-  <Patient>
+  </Patients>
+  <Patients>
     <id>2</id>
     <fullName>John Pak</fullName>
     <weight>78</weight>
@@ -16,5 +16,5 @@
     <bloodType>O</bloodType>
     <gender>true</gender>
     <birthDate>1999-10-25</birthDate>
-  </Patient>
+  </Patients>
 </PatientList>
